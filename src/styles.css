@@ -1,4 +1,7 @@
 @import url(./reset.css);
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "Roboto", "Noto Sans KR", -apple-system, BlinkMacSystemFont,

@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Auth from "../routes/Auth";
 import Home from "../routes/Home";
 import Profile from "../routes/Profile";
+import { AppRouterType } from "./App";
+import Navigation from "./Navigation";
 
-const AppRouter = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+const AppRouter = ({ isLoggedIn }: AppRouterType) => {
   return (
-    <Router>
+    <BrowserRouter>
+      {isLoggedIn ? <Navigation /> : null}
       <Routes>
         {isLoggedIn ? (
           <>
@@ -18,7 +19,7 @@ const AppRouter = () => {
           <Route path="/" element={<Auth />} />
         )}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

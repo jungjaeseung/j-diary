@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { authService } from "../fbase";
 import "./App.module.css";
+import JFooter from "./Footer";
 import AppRouter from "./Router";
 
 export type AppRouterType = {
@@ -22,10 +24,10 @@ function App(): JSX.Element {
     });
   }, []);
   return (
-    <>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {init ? <AppRouter isLoggedIn={isLoggedIn} /> : <h1>로딩중...</h1>}
-      {/* <footer>&copy; {new Date().getFullYear()} 3harang Capstone</footer> */}
-    </>
+      <JFooter />
+    </BrowserRouter>
   );
 }
 export default App;

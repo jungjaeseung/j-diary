@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/j-diary/static/css/main.d9c1a612.css",
+    "main.js": "/j-diary/static/js/main.9181c805.js",
+    "index.html": "/j-diary/index.html",
+    "main.d9c1a612.css.map": "/j-diary/static/css/main.d9c1a612.css.map",
+    "main.9181c805.js.map": "/j-diary/static/js/main.9181c805.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9c1a612.css",
+    "static/js/main.9181c805.js"
+  ]
+}

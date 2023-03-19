@@ -2,6 +2,7 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { authService } from "../fbase";
+import { useTitle } from "../hooks/useTitle";
 
 const Home = (): JSX.Element => {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ const Home = (): JSX.Element => {
     });
     navigate("/");
   };
+
+  useTitle("J-Diary - 홈");
   return (
     <>
       <span>Home 홈</span>

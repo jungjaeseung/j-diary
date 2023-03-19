@@ -7,8 +7,8 @@ import Navigation from "./Navigation";
 
 const AppRouter = ({ isLoggedIn }: AppRouterType) => {
   return (
-    <BrowserRouter>
-      {isLoggedIn ? <Navigation /> : null}
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      {isLoggedIn && <Navigation />}
       <Routes>
         {isLoggedIn ? (
           <>

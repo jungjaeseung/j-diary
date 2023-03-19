@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import React, { useState, useEffect } from "react";
 import { authService } from "../fbase";
+import { useTitle } from "../hooks/useTitle";
 
 const Auth = (): JSX.Element => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -58,10 +59,8 @@ const Auth = (): JSX.Element => {
   const onSocialClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     let provider;
     if ((e.target as HTMLButtonElement).name === "google") {
-      console.log("구글로그인");
       provider = new GoogleAuthProvider();
     } else if ((e.target as HTMLButtonElement).name === "facebook") {
-      console.log("페이스북로그인");
       provider = new FacebookAuthProvider();
     } else if ((e.target as HTMLButtonElement).name === "naver") {
       console.log("네이버로그인");
@@ -92,6 +91,8 @@ const Auth = (): JSX.Element => {
       setErrorMessage("올바르지 않은 비밀번호 입니다.");
     }
   }, [errorCode]);
+
+  useTitle("J-Diary - 로그인");
 
   return (
     <div>

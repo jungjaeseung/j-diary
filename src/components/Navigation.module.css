@@ -12,14 +12,25 @@
 }
 
 .appIconContainer {
-  width: 60px;
+  width: 260px;
   height: 60px;
   margin-top: 10px;
 }
-.appIconContainer > img {
-  width: 100%;
-  height: 100%;
+.appIconClickable {
+  width: fit-content;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+}
+.appIconClickable > img {
+  width: 60px;
+  height: 60px;
+}
+.appIconClickable > h1 {
+  margin-left: 4px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--brand-color);
 }
 
 .navContainer {
@@ -32,6 +43,25 @@
   align-items: center;
   margin-left: 10px;
 }
-.navBtnContainer > span {
-  font-size: 20px;
+.navIconContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
+.navIcon {
+  width: 34px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 12px;
+}
+.navIconContainer > span {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 1300px 부터 Navbar 작게 */
+/* 1020px 부터 Sidebar 없앰 */

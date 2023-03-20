@@ -1,0 +1,15 @@
+:root {
+  --font-black-color: #191919;
+  --font-gray-color: #767676;
+  --font-light-gray-color: #999999;
+  --brand-color: #53b6d2;
+  --alert-color: #ff3120;
+  --background-color: #f1f1f5;
+  --background-light-color: #f8f8fa;
+  --line-black-color: #191919;
+  --line-gray-color: #dbdbdb;
+  --line-light-gray-color: #ededed;
+
+  --form-container-width: 300px;
+  --form-container-height: 400px;
+}

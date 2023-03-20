@@ -1,0 +1,16 @@
+@import url(../variables.css);
+
+.main {
+  width: 100%;
+  display: flex;
+}
+
+.contentContainer {
+  width: 50%;
+  min-width: 550px;
+  border: 1px solid var(--line-gray-color);
+}
+.asideContainer {
+  width: 350px;
+  padding: 16px;
+}

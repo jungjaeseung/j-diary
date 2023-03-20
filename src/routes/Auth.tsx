@@ -8,12 +8,16 @@ import {
 import React, { useState, useEffect } from "react";
 import { authService } from "../fbase";
 import { useTitle } from "../hooks/useTitle";
+import { useNavigate } from "react-router-dom";
+import styles from "./Auth.module.css";
 
 const Auth = (): JSX.Element => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [newAccount, setNewAccount] = useState(false);
   const [errorCode, setErrorCode] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
   const onChange = ({
     target: { name, value },
   }: {
@@ -40,6 +44,7 @@ const Auth = (): JSX.Element => {
         console.log(error.code);
         setErrorCode(error.code);
       });
+      navigate("/setusername");
     } else {
       //로그인 하기
       data = await signInWithEmailAndPassword(
@@ -116,7 +121,7 @@ const Auth = (): JSX.Element => {
           {newAccount ? "이미 계정이 있나요?" : "새 계정을 만들까요?"}
         </span>
       </form>
-      <span>{errorMessage}</span>
+      <span className={styles.errorMsg}>{errorMessage}</span>
       <div>
         <button name="google" onClick={onSocialClick}>
           구글 로그인

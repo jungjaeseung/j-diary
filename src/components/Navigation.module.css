@@ -1,0 +1,37 @@
+@import url(../variables.css);
+
+.header {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.headerContainer {
+  width: 260px;
+  height: 100%;
+}
+
+.appIconContainer {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+.appIconContainer > img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navContainer {
+  margin-top: 16px;
+}
+.navBtnContainer {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.navBtnContainer > span {
+  font-size: 20px;
+}

@@ -1,4 +1,4 @@
-import { IsLoggedInType } from "./App";
+import { IsLoggedInType } from "../types/UserType";
 import styles from "./Aside.module.css";
 import Footer from "./Footer";
 

@@ -3,7 +3,7 @@ import Auth from "../routes/Auth";
 import SetInitProfile from "../routes/SetInitProfile";
 import Home from "../routes/Home";
 import Profile from "../routes/Profile";
-import { IsLoggedInType } from "./App";
+import { IsLoggedInType } from "../types/UserType";
 import Navigation from "./Navigation";
 import styles from "./Router.module.css";
 import ChatMain from "../routes/ChatMain";

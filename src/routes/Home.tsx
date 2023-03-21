@@ -1,7 +1,7 @@
 import { useTitle } from "../hooks/useTitle";
 
 const Home = (): JSX.Element => {
-  const onSubmit = (e: any) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
   useTitle("J-Diary - 홈");

@@ -8,10 +8,6 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export type IsLoggedInType = {
-  isLoggedIn: boolean;
-};
-
 function App(): JSX.Element {
   const [init, setInit] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);

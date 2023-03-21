@@ -1,19 +1,26 @@
 @import url(../variables.css);
 
 .main {
-  width: 100%;
+  flex: 2;
   display: flex;
 }
 
 .contentContainer {
-  max-width: 50%;
-  min-width: 550px;
+  width: 600px;
   border: 1px solid var(--line-gray-color);
 }
 
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 1020px) {
+  .main {
+    flex: 4;
+  }
+}
+@media screen and (max-width: 660px) {
   .contentContainer {
     width: 100%;
     min-width: 100%;
+  }
+  .main {
+    flex: 12;
   }
 }

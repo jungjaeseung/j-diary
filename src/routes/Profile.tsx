@@ -16,6 +16,7 @@ const Profile = (): JSX.Element => {
   return (
     <>
       <span>Profile 프로필</span>
+      <br />
       <button onClick={onLogoutClick}>로그아웃</button>
     </>
   );

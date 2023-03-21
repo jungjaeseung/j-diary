@@ -1,7 +1,7 @@
 @import url(../variables.css);
 
 .asideContainer {
-  width: 350px;
+  width: 400px;
   padding: 16px;
 }
 .asideInput {
@@ -18,7 +18,11 @@
   border-radius: 16px;
   border: 1px solid var(--line-gray-color);
 }
-
+@media screen and (max-width: 1085px) {
+  .asideContainer {
+    width: 330px;
+  }
+}
 @media screen and (max-width: 1020px) {
   .asideContainer {
     display: none;

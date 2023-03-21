@@ -1,18 +1,17 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Auth from "../routes/Auth";
 import SetInitProfile from "../routes/SetInitProfile";
 import Home from "../routes/Home";
 import Profile from "../routes/Profile";
-import JFooter from "./Footer";
-import { AppRouterType } from "./App";
+import { IsLoggedInType } from "./App";
 import Navigation from "./Navigation";
 import styles from "./Router.module.css";
 import ChatMain from "../routes/ChatMain";
 import Bookmark from "../routes/Bookmark";
 import Follow from "../routes/Follow";
+import Aside from "./Aside";
 
-const AppRouter = ({ isLoggedIn }: AppRouterType) => {
+const AppRouter = ({ isLoggedIn }: IsLoggedInType) => {
   return (
     <>
       {isLoggedIn && <Navigation />}
@@ -33,9 +32,7 @@ const AppRouter = ({ isLoggedIn }: AppRouterType) => {
             )}
           </Routes>
         </div>
-        <div className={styles.asideContainer}>
-          <JFooter />
-        </div>
+        <Aside isLoggedIn={isLoggedIn} />
       </main>
     </>
   );

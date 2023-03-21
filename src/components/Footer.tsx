@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-const JFooter = () => {
+const Footer = () => {
   return (
     <footer className={styles.container}>
       <span>
@@ -16,4 +16,4 @@ const JFooter = () => {
   );
 };
 
-export default JFooter;
+export default Footer;

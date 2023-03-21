@@ -12,17 +12,23 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Auth.module.css";
 
 const Auth = (): JSX.Element => {
-  const [form, setForm] = useState({ email: "", password: "" });
-  const [newAccount, setNewAccount] = useState(false);
-  const [errorCode, setErrorCode] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+
+  const [form, setForm] = useState({ email: "", password: "" });
+  // 이메일/비밀번호 form
+  const [newAccount, setNewAccount] = useState(false);
+  // 로그인/회원가입 토글
+  const [errorCode, setErrorCode] = useState("");
+  // 로그인/회원가입 오류 코드(get)
+  const [errorMessage, setErrorMessage] = useState("");
+  // 로그인/회원가입 오류 코드(for span)
 
   const onChange = ({
     target: { name, value },
   }: {
     target: { name: string; value: string };
   }) => setForm({ ...form, [name]: value });
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let data;

@@ -4,8 +4,11 @@ import { authService } from "../fbase";
 import "./App.module.css";
 import AppRouter from "./Router";
 import styles from "./App.module.css";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-export type AppRouterType = {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export type IsLoggedInType = {
   isLoggedIn: boolean;
 };
 
@@ -26,7 +29,13 @@ function App(): JSX.Element {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className={styles.appContainer}>
-        {init ? <AppRouter isLoggedIn={isLoggedIn} /> : <h1>로딩중...</h1>}
+        {init ? (
+          <AppRouter isLoggedIn={isLoggedIn} />
+        ) : (
+          <div className={styles.loadingContainer}>
+            <FontAwesomeIcon icon={faSpinner} spin className={styles.loading} />
+          </div>
+        )}
       </div>
     </BrowserRouter>
   );

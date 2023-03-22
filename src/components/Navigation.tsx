@@ -74,8 +74,8 @@ const Navigation = () => {
         </div>
         <div className={styles.navContainer}>
           <div className={styles.navBtnContainer}>
-            <div className={styles.navIconContainer}>
-              <div className={styles.navIcon} onClick={onHomeIconClick}>
+            <div className={styles.navIconContainer} onClick={onHomeIconClick}>
+              <div className={styles.navIcon}>
                 <FontAwesomeIcon
                   icon={faHouse}
                   className={isActive[0] ? "tabActive" : "notTabActive"}
@@ -90,8 +90,8 @@ const Navigation = () => {
             </div>
           </div>
           <div className={styles.navBtnContainer}>
-            <div className={styles.navIconContainer}>
-              <div className={styles.navIcon} onClick={onChatIconClick}>
+            <div className={styles.navIconContainer} onClick={onChatIconClick}>
+              <div className={styles.navIcon}>
                 <FontAwesomeIcon
                   icon={faPaperPlane}
                   className={isActive[1] ? "tabActive" : "notTabActive"}
@@ -106,8 +106,11 @@ const Navigation = () => {
             </div>
           </div>
           <div className={styles.navBtnContainer}>
-            <div className={styles.navIconContainer}>
-              <div className={styles.navIcon} onClick={onBookmarkIconClick}>
+            <div
+              className={styles.navIconContainer}
+              onClick={onBookmarkIconClick}
+            >
+              <div className={styles.navIcon}>
                 <FontAwesomeIcon
                   icon={faBookmark}
                   className={isActive[2] ? "tabActive" : "notTabActive"}
@@ -141,8 +144,11 @@ const Navigation = () => {
             </div>
           </div>
           <div className={styles.navBtnContainer}>
-            <div className={styles.navIconContainer}>
-              <div className={styles.navIcon} onClick={onProfileIconClick}>
+            <div
+              className={styles.navIconContainer}
+              onClick={onProfileIconClick}
+            >
+              <div className={styles.navIcon}>
                 <FontAwesomeIcon
                   icon={faCircleUser}
                   className={isActive[4] ? "tabActive" : "notTabActive"}

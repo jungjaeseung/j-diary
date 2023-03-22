@@ -1,4 +1,5 @@
 :root {
+  /* colors */
   --font-black-color: #191919;
   --font-gray-color: #767676;
   --font-light-gray-color: #999999;
@@ -6,10 +7,23 @@
   --alert-color: #ff3120;
   --background-color: #f1f1f5;
   --background-light-color: #f8f8fa;
+  --background-black-translucent-color: rgba(0, 0, 0, 0.5);
   --line-black-color: #191919;
   --line-gray-color: #dbdbdb;
   --line-light-gray-color: #ededed;
 
-  --form-container-width: 300px;
-  --form-container-height: 400px;
+  /* sizes */
+  --app-default-font-size: 20px;
+
+  --modal-container-width: 400px;
+  --modal-container-height: 400px;
+
+  --header-container-width: 260px;
+  --header-container-min-width-rd: 60px;
+  --header-icon-width: 60px;
+  --header-icon-height: 58px;
+
+  --main-content-width: 600px;
+
+  --aside-container-width: 400px;
 }

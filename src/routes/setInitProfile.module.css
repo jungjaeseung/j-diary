@@ -4,17 +4,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--background-black-translucent-color);
   width: 100%;
   height: 100%;
 }
 
 .formContainer {
   position: fixed;
-  top: calc(50% - var(--form-container-height) / 2);
-  left: calc(50% - var(--form-container-width) / 2);
-  width: var(--form-container-width);
-  height: var(--form-container-height);
+  top: calc(50% - var(--modal-container-height) / 2);
+  left: calc(50% - var(--modal-container-width) / 2);
+  width: var(--modal-container-width);
+  height: var(--modal-container-height);
   background-color: var(--background-color);
   border-radius: 20px;
   display: flex;
@@ -27,4 +27,4 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} /* 임시로 만든거라 수정해야됨  */

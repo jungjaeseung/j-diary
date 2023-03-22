@@ -47,7 +47,7 @@ const Auth = (): JSX.Element => {
         form.email,
         form.password
       ).catch((error) => {
-        console.log(error.code);
+        console.log(error.message);
         setErrorCode(error.code);
       });
       navigate("/setusername");

@@ -3,7 +3,8 @@
 .container > span {
   font-size: 14px;
 }
+
 .container > span > a {
   text-decoration: none;
   color: var(--font-gray-color);
-}
+} /* 개인정보 처리방침 */

@@ -2,10 +2,11 @@
 @import url(./variables.css);
 * {
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: var(--app-default-font-size);
 }
 html {
-  font-size: 20px;
+  font-size: var(--app-default-font-size);
+  color: var(--font-black-color);
 }
 body {
   margin: 0;
@@ -15,7 +16,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -23,6 +23,7 @@ code {
 #root {
   display: flex;
 }
+
 .fw400 {
   font-weight: 400;
 }

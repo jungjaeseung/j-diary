@@ -1,0 +1,16 @@
+@import url(../variables.css);
+
+.formContainer {
+  height: 116px;
+}
+
+.mainForm {
+  width: 100%;
+}
+.mainFormInput {
+  border: none;
+  font-size: var(--input-font-size);
+}
+.mainFormInput:focus {
+  outline: none;
+}

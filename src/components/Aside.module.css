@@ -3,12 +3,15 @@
 .asideContainer {
   width: var(--aside-container-width);
   padding: 16px;
+  overflow-y: scroll;
 }
 .asideInput {
   width: 100%;
-  border-radius: 16px;
-  padding: 8px 8px 8px 12px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 8px 8px 8px 50px;
   border: 1px solid var(--line-gray-color);
+  font-size: var(--input-font-size);
 }
 .asideBox {
   margin-top: 16px;

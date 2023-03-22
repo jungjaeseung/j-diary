@@ -1,8 +1,14 @@
+import Title from "../components/Title";
 import { useTitle } from "../hooks/useTitle";
 
 const ChatMain = () => {
   useTitle("J-Diary - 채팅");
-  return <span>Chat 채팅</span>;
+  return (
+    <div>
+      <Title titleName="채팅" />
+      <span>Chat 채팅</span>
+    </div>
+  );
 };
 
 export default ChatMain;

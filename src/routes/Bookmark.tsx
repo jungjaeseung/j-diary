@@ -1,8 +1,14 @@
+import Title from "../components/Title";
 import { useTitle } from "../hooks/useTitle";
 
 const Bookmark = () => {
   useTitle("J-Diary - 북마크");
-  return <span>Bookmark 북마크</span>;
+  return (
+    <div>
+      <Title titleName="북마크" />
+      <span>Bookmark 북마크</span>
+    </div>
+  );
 };
 
 export default Bookmark;

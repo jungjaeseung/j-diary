@@ -30,7 +30,7 @@ const Navigation = ({ data, isActive, setIsActive }: NavPropsType) => {
   };
 
   const onIconClick = (index: number, location: string) => {
-    let arr = new Array();
+    let arr: boolean[] = new Array();
     data.map(() => {
       arr.push(false);
     });

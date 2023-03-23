@@ -44,7 +44,7 @@ const Header = () => {
   ];
 
   const onLogoClick = () => {
-    let arr = new Array();
+    let arr: boolean[] = new Array();
     data.map(() => {
       arr.push(false);
     });

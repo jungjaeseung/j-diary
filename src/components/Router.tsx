@@ -4,17 +4,17 @@ import SetInitProfile from "../routes/SetInitProfile";
 import Home from "../routes/Home";
 import Profile from "../routes/Profile";
 import { IsLoggedInType } from "../types/UserType";
-import Navigation from "./Navigation";
 import styles from "./Router.module.css";
 import ChatMain from "../routes/ChatMain";
 import Bookmark from "../routes/Bookmark";
 import Follow from "../routes/Follow";
 import Aside from "./Aside";
+import Header from "./Header";
 
 const AppRouter = ({ isLoggedIn }: IsLoggedInType) => {
   return (
     <>
-      {isLoggedIn && <Navigation />}
+      {isLoggedIn && <Header />}
       <main className={styles.main}>
         <div className={styles.contentContainer}>
           <Routes>

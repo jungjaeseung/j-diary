@@ -1,0 +1,33 @@
+@import url(../variables.css);
+
+.header {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.headerContainer {
+  min-width: var(--header-container-width);
+  height: 100%;
+}
+.appIconContainer {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+}
+.appIconClickable {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.appIconClickable > img {
+  width: var(--header-icon-width);
+  height: var(--header-icon-width);
+}
+.appIconClickable > h1 {
+  margin-left: 4px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--brand-color);
+}

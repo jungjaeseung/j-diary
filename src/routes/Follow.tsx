@@ -6,7 +6,7 @@ const Follow = () => {
   return (
     <div>
       <Title titleName="팔로우" />
-      <span>Follow 팔로우</span>
+      <span>Follow 팔로우 미구현입니다!</span>
     </div>
   );
 };

@@ -5,6 +5,9 @@
   padding: 16px;
   overflow-y: scroll;
 }
+.asideContainer::-webkit-scrollbar {
+  display: none;
+}
 .asideInput {
   width: 100%;
   height: 50px;

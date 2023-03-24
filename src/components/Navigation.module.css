@@ -30,20 +30,7 @@
 /* 1300px 부터 Navbar 작게 */
 /* 1020px 부터 Sidebar 없앰 */
 @media screen and (max-width: 1300px) {
-  .navIconContainer > span,
-  .appIconClickable > h1 {
+  .navIconContainer > span {
     display: none;
-  }
-  .headerContainer {
-    width: 20%;
-    min-width: 70px;
-  }
-}
-@media screen and (max-width: 1020px) {
-  .header {
-    min-width: 60px;
-  }
-  .headerContainer {
-    min-width: var(--header-container-min-width-rd);
   }
 }

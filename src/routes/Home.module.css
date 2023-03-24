@@ -1,16 +1,82 @@
 @import url(../variables.css);
 
+.main {
+  height: 100%;
+}
+
+.mainHomeContainer {
+  height: calc(100% - 58px);
+}
+
 .formContainer {
-  height: 116px;
+  width: 100%;
+  min-height: 116px; /* 변동해야할수도있음 */
+  display: flex;
+  border-bottom: 1px solid var(--line-gray-color);
+  padding-bottom: 16px;
 }
 
 .mainForm {
   width: 100%;
 }
+
+.mainFromContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.mainFormInputContainer {
+  width: 100%;
+}
 .mainFormInput {
+  margin-top: 14px;
+  margin-bottom: 9px;
+  padding: 0px;
+  width: 100%;
+  min-height: 26px;
   border: none;
   font-size: var(--input-font-size);
+  resize: none;
 }
 .mainFormInput:focus {
   outline: none;
+}
+.mainFormSubmitBtn {
+  border-radius: 20px;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.mainContentContainer {
+  overflow-y: auto;
+}
+.mainContentContainer::-webkit-scrollbar {
+  width: 0px;
+}
+
+.postContainer {
+  min-height: 90px;
+  display: flex;
+  border-bottom: 1px solid var(--line-gray-color);
+}
+.infoSection {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: var(--font-gray-color);
+}
+.infoSection > span:first-child {
+  font-weight: 700;
+  color: var(--font-black-color);
+  margin-right: 4px;
+}
+.content {
+  font-size: 15px;
+  white-space: pre-wrap;
+  line-height: 120%;
+  margin-bottom: 16px;
 }

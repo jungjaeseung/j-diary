@@ -6,7 +6,7 @@ const ChatMain = () => {
   return (
     <div>
       <Title titleName="채팅" />
-      <span>Chat 채팅</span>
+      <span>Chat 채팅 미구현입니다!</span>
     </div>
   );
 };

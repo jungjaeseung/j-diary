@@ -9,6 +9,11 @@
 .headerContainer {
   min-width: var(--header-container-width);
   height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.headerContainer::-webkit-scrollbar {
+  display: none;
 }
 .appIconContainer {
   width: 100%;
@@ -30,4 +35,25 @@
   font-size: 28px;
   font-weight: 700;
   color: var(--brand-color);
+}
+
+/* 1300px 부터 logo tile 없앰 */
+/* 1020px 부터 Sidebar 없앰 */
+@media screen and (max-width: 1300px) {
+  .appIconClickable > h1 {
+    display: none;
+  }
+  .headerContainer {
+    width: 20%;
+    min-width: 70px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .header {
+    min-width: 60px;
+  }
+  .headerContainer {
+    min-width: var(--header-container-min-width-rd);
+  }
 }

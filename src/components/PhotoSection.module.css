@@ -1,0 +1,14 @@
+.profilePhotoContainer {
+  width: 48px;
+  height: 100%;
+  margin-left: 16px;
+  margin-right: 12px;
+}
+/* 이미지 임시구역 */
+.profilePhotoContainer > div {
+  margin-top: 4px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line-gray-color);
+  border-radius: 50%;
+}

@@ -7,7 +7,9 @@
 
 .contentContainer {
   width: var(--main-content-width);
-  border: 1px solid var(--line-gray-color);
+  outline: 1px solid var(--line-gray-color);
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 1020px) {

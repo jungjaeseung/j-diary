@@ -6,7 +6,7 @@ const Bookmark = () => {
   return (
     <div>
       <Title titleName="북마크" />
-      <span>Bookmark 북마크</span>
+      <span>Bookmark 북마크 미구현입니다!</span>
     </div>
   );
 };

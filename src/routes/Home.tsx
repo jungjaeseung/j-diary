@@ -14,6 +14,7 @@ import { dbService } from "../fbase";
 import { HomePropsType } from "../types/PropsType";
 import { PostDataType } from "../types/AdminType";
 import PhotoSection from "../components/PhotoSection";
+import Post from "../components/Post";
 
 const Home = ({ userObj }: HomePropsType): JSX.Element => {
   const inputMaxLength = 120;
@@ -42,7 +43,6 @@ const Home = ({ userObj }: HomePropsType): JSX.Element => {
   };
   useEffect(() => {
     getData();
-    console.log(data);
     handleContentDiv();
   }, []);
   useEffect(() => {
@@ -135,19 +135,12 @@ const Home = ({ userObj }: HomePropsType): JSX.Element => {
           </div>
           <div className={styles.mainContentContainer} ref={contentDiv}>
             {data.map((item) => (
-              <div className={styles.postContainer} key={item.id}>
-                <PhotoSection />
-                <div>
-                  <div className={styles.infoSection}>
-                    <span>닉네임</span>
-                    <span>@email · </span>
-                    <span>1s</span>
-                  </div>
-                  <h4 className={styles.content}>
-                    {(item.data as DocumentData).text}
-                  </h4>
-                </div>
-              </div>
+              <Post
+                key={item.id}
+                data={item}
+                isOwner={(item.data as DocumentData).uid === userObj.uid}
+                inputMaxLength={inputMaxLength}
+              />
             ))}
           </div>
         </div>

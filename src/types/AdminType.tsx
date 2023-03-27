@@ -21,6 +21,7 @@ export type PostDataType = {
   input?: string;
   text?: string;
   timestamp?: number;
+  uid?: string;
   id?: string;
   data?: DocumentData;
 };

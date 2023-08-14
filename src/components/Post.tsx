@@ -4,6 +4,8 @@ import PhotoSection from "./PhotoSection";
 import { deleteDoc, doc, DocumentData, updateDoc } from "firebase/firestore";
 import { dbService } from "../fbase";
 import { useEffect, useRef, useState } from "react";
+import { HomePropsType } from "../types/PropsType";
+import { User } from "firebase/auth";
 
 const Post = ({
   data,
@@ -60,8 +62,8 @@ const Post = ({
             <form onSubmit={onSubmit}>
               <div className={styles.topDiv}>
                 <div className={styles.infoSection}>
-                  <span>닉네임</span>
-                  <span>@email · </span>
+                  <span>{`${data.data && data.data.creator}`}</span>
+                  <span>@{`${data.data && data.data.creatorEmail}`} · </span>
                   <span>1s</span>
                 </div>
                 <div>
@@ -89,8 +91,8 @@ const Post = ({
           <>
             <div className={styles.topDiv}>
               <div className={styles.infoSection}>
-                <span>닉네임</span>
-                <span>@email · </span>
+                <span>{`${data.data && data.data.creator}`}</span>
+                <span>@{`${data.data && data.data.creatorEmail}`} · </span>
                 <span>1s</span>
               </div>
               <div>

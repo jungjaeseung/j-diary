@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./setInitProfile.module.css";
+import { User, updateProfile } from "firebase/auth";
+import { authService } from "../fbase";
 
 const SetInitProfile = () => {
   const [userName, setUserName] = useState("");
@@ -11,8 +13,17 @@ const SetInitProfile = () => {
   };
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //이름넣기
-    //프로필사진변경
+    updateProfile(authService.currentUser as User, {
+      displayName: userName,
+      //프로필사진변경
+      //profileURL: "",
+    })
+      .then(() => {
+        //profile updated!
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     navigate("/");
   };

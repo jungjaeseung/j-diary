@@ -19,6 +19,7 @@ function App(): JSX.Element {
       if (authService.currentUser !== null) {
         setIsLoggedIn(true);
         setUserObj(user);
+        console.log(user);
       } else {
         setIsLoggedIn(false);
       }

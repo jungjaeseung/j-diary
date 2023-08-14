@@ -44,6 +44,7 @@ const Home = ({ userObj }: HomePropsType): JSX.Element => {
   useEffect(() => {
     getData();
     handleContentDiv();
+    console.log(data);
   }, []);
   useEffect(() => {
     window.addEventListener("resize", handleContentDiv);
@@ -59,6 +60,8 @@ const Home = ({ userObj }: HomePropsType): JSX.Element => {
         text: input,
         timestamp: Date.now(),
         uid: userObj.uid,
+        creatorEmail: userObj.email,
+        creator: userObj.displayName,
         // profileImg
         // userName
       });

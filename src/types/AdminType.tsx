@@ -24,4 +24,5 @@ export type PostDataType = {
   uid?: string;
   id?: string;
   data?: DocumentData;
+  creatorEmail?: string;
 };

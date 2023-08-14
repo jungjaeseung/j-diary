@@ -11,7 +11,7 @@ const Aside = ({ isLoggedIn }: IsLoggedInType) => {
             <input
               className={styles.asideInput}
               type="text"
-              placeholder="검색"
+              placeholder="검색 *기능 미구현"
             />
           </div>
           <div
